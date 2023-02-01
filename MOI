@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+
+int main()
+{
+int no;
+float B,H,I,n,r,D;
+
+printf("\n");
+printf("\nCALCULATE AREA MOMENT OF INERTIA,I");
+printf("\nselect your shape:");
+printf("\n1.rectangle");
+printf("\n2.circle");
+printf("\n3.triangle");
+printf("\n4.exit");
+
+back:
+printf("\nenter shape number or select 4\n");
+scanf("%d",&no);
+if(no==1)
+{
+printf("\nenter the breadth,B(m)=");
+scanf("%f",&B);
+printf("\nenter the value of height,D(m)=");
+scanf("%f",&D);
+
+
+
+{
+I=(B/12)*pow(D,3);
+}
+printf("area moment of inertia of rectangle is,I=%f(m^4)",I);
+goto back;
+}
+
+else if(no==2)
+{
+printf("enter the value of radius,r(m)=");
+scanf("%f",&r);
+
+{
+I=(3.14/4)*pow(r,4);
+}
+printf("\narea moment of inertia of circle,I=%f(m^4)",I);
+goto back;
+}
+
+else if(no==3)
+{
+printf("\nenter the value of base,B(m)=");
+scanf("%f",&B);
+printf("enter the value of height,H(m)=");
+scanf("%f",&H);
+
+{
+I=(B/12)*pow(H,3);
+}
+printf("\narea moment of inertia of triangle,I=%f(m^4)",I);
+goto back;
+}
+else if(no==4)
+{
+printf("\nthank you");
+}
+
+else
+{
+printf("\ninavlid input");
+goto back;
+}
+getch();
+
+}
