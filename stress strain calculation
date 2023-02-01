@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int main()
+{
+float F,A,L,dL,STRESS,STRAIN,Y;
+printf("Enter the force on the object(in newton):");
+printf("\nEnter the area of the object(in m^2):\n");
+scanf("%f\n%f",&F,&A);
+{
+STRESS=F/A;
+}
+printf("STRESS=%f",STRESS);
+
+
+printf("\nEnter the change in length of the object(in m):");
+printf("\nEnter the length of the object(in m):\n");
+scanf("%f\n%f",&dL,&L);
+{
+STRAIN=dL/L;
+}
+printf("STRAIN=%f",dL/L);
+{
+ Y=STRESS/STRAIN;
+}
+
+printf("\nThe Youngs modulus is:%f",Y);
+return 0;
+}
