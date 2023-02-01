@@ -1,0 +1,72 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+
+int main()
+{
+int no;
+float x1,x2,x3,y1,y2,y3,b,d,Cx,Cy;
+
+printf("\n");
+printf("\nCALCULATE THE CENTROID OF REGULAR SHAPES");
+printf("\nselect the shape:");
+printf("\n1.triangle");
+printf("\n2.rectangle");
+printf("\n3.circle");
+printf("\n4.exit");
+
+back:
+printf("\nselect the shape or select 4:\n");
+scanf("%d",&no);
+if(no==1)
+{
+printf("\nenter the values of x1,x2,x3,y1,y2,y3\n");
+scanf("%f%f%f%f%f%f",&x1,&x2,&x3,&y1,&y2,&y3);
+{
+Cx=(x1+x2+x3)/3;
+Cy=(y1+y2+y3)/3;
+}
+printf("centroid of triangle is,\nCx%f\nCy%f",Cx,Cy);
+goto back;
+}
+
+
+
+else if(no==2)
+{
+printf("enter the base b(m):\n");
+scanf("%f",&b);
+printf("enter the depth d(m):\n");
+scanf("%f",&d);
+{
+ Cx=b/2;
+ Cy=d/2;
+}
+printf("centroid of rectangle is,\nCx%f\nCy%f",Cx,Cy);
+goto back;
+
+}
+else if(no==3)
+{
+ printf("\nenter the value of diameter d(m):");
+ scanf("%f",&d);
+
+ {
+  Cx=d/2;
+  Cy=d/2;
+ }
+ printf("centroid of the circle is,\nCx%f\nCy%f",Cx,Cy);
+ goto back;
+}
+else if(no==4)
+{
+ printf("\nthank you");
+}
+else
+{
+    printf("\ninvalid input");
+    goto back;
+}
+getch();
+}
+
